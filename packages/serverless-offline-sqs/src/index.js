@@ -181,7 +181,9 @@ class ServerlessOfflineSQS {
             functionKey,
             handler: functionDefinition.handler,
             sqs: {
-              arn: `arn:aws:sqs:${this.options.region}:${this.options.accountId}:${functionKey}`,
+              arn: `arn:aws:sqs:${this.options.region}:${
+                this.options.accountId
+              }:${functionKey.replace(/worker$/i, "")}`,
               ...sqs,
             },
           });
