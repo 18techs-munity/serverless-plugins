@@ -1,6 +1,6 @@
 const {assign, omitBy, isUndefined, get, startsWith, pick} = require('lodash/fp');
 
-const log = require('@serverless/utils/log').log;
+const log = console;
 
 const DynamodbStreams = require('./dynamodb-streams');
 

@@ -11,7 +11,7 @@ const {
   toString,
   values
 } = require('lodash/fp');
-const log = require('@serverless/utils/log').log;
+const log = console;
 const {default: PQueue} = require('p-queue');
 const SQSEventDefinition = require('./sqs-event-definition');
 const SQSEvent = require('./sqs-event');

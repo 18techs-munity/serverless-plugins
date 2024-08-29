@@ -1,7 +1,7 @@
 const Minio = require('minio');
 const {assign, toNumber} = require('lodash/fp');
 
-const log = require('@serverless/utils/log').log;
+const log = console;
 
 const S3EventDefinition = require('./s3-event-definition');
 const S3Event = require('./s3-event');

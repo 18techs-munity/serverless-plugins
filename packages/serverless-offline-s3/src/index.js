@@ -1,6 +1,6 @@
 const { get, isUndefined, omitBy, pick } = require("lodash/fp");
 
-const log = require("@serverless/utils/log").log;
+const log = console;
 
 const S3 = require("./s3");
 
