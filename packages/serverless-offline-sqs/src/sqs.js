@@ -138,7 +138,7 @@ class SQS {
             )
           );
         } catch (err) {
-          log.warning(err.stack);
+          log.warn(err.stack);
         }
       }
 
@@ -170,7 +170,7 @@ class SQS {
     } catch (err) {
       if (remainingTry > 0 && err.name === 'AWS.SimpleQueueService.NonExistentQueue')
         return this._createQueue({queueName}, remainingTry - 1);
-      log.warning(err.stack);
+      log.warn(err.stack);
     }
   }
 }
